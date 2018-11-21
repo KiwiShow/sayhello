@@ -1,12 +1,14 @@
 language: python
 
 python:
-  - "3.7"
+  - "3.7-dev"
 
 before_install:
   - pip install pipenv
-  - pipenv install -dev
-  - pipenv shell
 
-script: test_sayhello.py
+install:
+  - pipenv install -dev
+
+script:
+  pipenv run python test_sayhello.py
 
