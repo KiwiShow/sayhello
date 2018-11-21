@@ -1,0 +1,10 @@
+language: python
+
+before_install:
+  - apt-get -qq update
+  - pip install pipenv
+  - pipenv install -dev
+  - pipenv shell
+
+script: test_sayhello.py
+
